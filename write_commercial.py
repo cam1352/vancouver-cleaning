@@ -1,4 +1,4 @@
-"use client";
+﻿content = """"use client";
 
 import { useState } from 'react';
 import { Calendar as CalendarIcon, ArrowRight, ArrowLeft, Home, Building2, CheckCircle2, Clock, MapPin, Sparkles, Briefcase } from 'lucide-react';
@@ -314,3 +314,6 @@ export default function BookingPage() {
     </div>
   );
 }
+"""
+with open('src/app/book/page.tsx', 'w', encoding='utf-8') as f:
+    f.write(content)
