@@ -1,4 +1,7 @@
-import Link from 'next/link';
+﻿import os
+
+with open("src/app/page.tsx", "w", encoding="utf-8") as f:
+    f.write("""import Link from 'next/link';
 import { Sparkles, Calendar, ArrowRight, Star, ShieldCheck, MapPin, Building, Globe } from 'lucide-react';
 import Image from 'next/image';
 import GoogleTranslate from '@/components/GoogleTranslate';
@@ -51,7 +54,7 @@ export default function Home() {
         
         {/* Abstract Graphic */}
         <div className="mt-20 w-full max-w-6xl h-[400px] md:h-[600px] bg-gray-200 rounded-[3rem] overflow-hidden relative shadow-2xl">
-           <Image src="/hero.jpg" alt="Commercial Cleaning Vancouver" fill className="object-cover hover:scale-105 transition-transform duration-1000" />
+           <Image src="/vanclean_hero_1790110372640.jpg" alt="Commercial Cleaning Vancouver" fill className="object-cover hover:scale-105 transition-transform duration-1000" />
            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
            <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end">
              <div className="bg-white/20 backdrop-blur-md text-white border border-white/20 p-6 rounded-3xl max-w-sm hidden md:block">
@@ -109,3 +112,5 @@ export default function Home() {
     </div>
   );
 }
+""")
+print("Re-wrote page.tsx")
