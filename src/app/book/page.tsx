@@ -63,18 +63,18 @@ export default function BookingPage() {
     <div className="min-h-screen bg-slate-50 font-sans pb-20">
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="text-xl font-black text-blue-600 flex items-center gap-2">
+          <Link href="/" className="text-xl font-black text-emerald-600 flex items-center gap-2">
             <Sparkles className="w-5 h-5" /> Vancouver Cleaning
           </Link>
           <div className="flex bg-slate-100 p-1 rounded-lg">
             <button 
               onClick={() => { setPropertyType('commercial'); setStep(1); }} 
-              className={`px-4 py-1.5 text-sm font-bold rounded-md transition-colors flex items-center gap-2 ${propertyType === 'commercial' ? 'bg-white shadow text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}>
+              className={`px-4 py-1.5 text-sm font-bold rounded-md transition-colors flex items-center gap-2 ${propertyType === 'commercial' ? 'bg-white shadow text-emerald-600' : 'text-slate-500 hover:text-slate-700'}`}>
               <Building2 className="w-4 h-4" /> Commercial
             </button>
             <button 
               onClick={() => { setPropertyType('residential'); setStep(1); }} 
-              className={`px-4 py-1.5 text-sm font-bold rounded-md transition-colors flex items-center gap-2 ${propertyType === 'residential' ? 'bg-white shadow text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}>
+              className={`px-4 py-1.5 text-sm font-bold rounded-md transition-colors flex items-center gap-2 ${propertyType === 'residential' ? 'bg-white shadow text-emerald-600' : 'text-slate-500 hover:text-slate-700'}`}>
               <Home className="w-4 h-4" /> Residential
             </button>
           </div>
@@ -103,7 +103,7 @@ export default function BookingPage() {
                   <label className="block font-bold text-slate-700 mb-4">Facility Type</label>
                   <div className="grid grid-cols-2 gap-3">
                     {['office', 'retail', 'industrial', 'medical'].map((type) => (
-                      <button key={type} onClick={() => setFacilityType(type)} className={`py-3 px-4 rounded-xl border font-bold capitalize transition-all flex items-center justify-center gap-2 ${facilityType === type ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-slate-200 text-slate-600 hover:border-slate-300'}`}>
+                      <button key={type} onClick={() => setFacilityType(type)} className={`py-3 px-4 rounded-xl border font-bold capitalize transition-all flex items-center justify-center gap-2 ${facilityType === type ? 'border-emerald-600 bg-emerald-50 text-emerald-700' : 'border-slate-200 text-slate-600 hover:border-slate-300'}`}>
                         {type === 'office' && <Briefcase className="w-4 h-4" />}
                         {type === 'retail' && <MapPin className="w-4 h-4" />}
                         {type === 'industrial' && <Building2 className="w-4 h-4" />}
@@ -117,9 +117,9 @@ export default function BookingPage() {
                 <div>
                   <div className="flex justify-between mb-2">
                     <label className="font-bold text-slate-700">Total Square Footage</label>
-                    <span className="text-blue-600 font-bold">{sqftCom.toLocaleString()} sq ft</span>
+                    <span className="text-emerald-600 font-bold">{sqftCom.toLocaleString()} sq ft</span>
                   </div>
-                  <input type="range" min="1000" max="100000" step="1000" value={sqftCom} onChange={(e) => setSqftCom(Number(e.target.value))} className="w-full accent-blue-600" />
+                  <input type="range" min="1000" max="100000" step="1000" value={sqftCom} onChange={(e) => setSqftCom(Number(e.target.value))} className="w-full accent-emerald-600" />
                   <div className="flex justify-between text-xs font-bold text-slate-400 mt-2">
                     <span>1,000 sqft</span>
                     <span>100,000+ sqft</span>
@@ -130,7 +130,7 @@ export default function BookingPage() {
                   <label className="block font-bold text-slate-700 mb-4">Contract Frequency</label>
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                     {['nightly', 'weekly', 'biweekly', 'monthly'].map((freq) => (
-                      <button key={freq} onClick={() => setFrequencyCom(freq)} className={`py-3 px-2 rounded-xl border font-bold capitalize transition-all text-sm ${frequencyCom === freq ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-slate-200 text-slate-600 hover:border-slate-300'}`}>
+                      <button key={freq} onClick={() => setFrequencyCom(freq)} className={`py-3 px-2 rounded-xl border font-bold capitalize transition-all text-sm ${frequencyCom === freq ? 'border-emerald-600 bg-emerald-50 text-emerald-700' : 'border-slate-200 text-slate-600 hover:border-slate-300'}`}>
                         {freq}
                       </button>
                     ))}
@@ -138,7 +138,7 @@ export default function BookingPage() {
                   {discountCom > 0 && <p className="text-sm text-green-600 font-bold mt-2">Volume discount applied ({discountCom * 100}% off standard rate).</p>}
                 </div>
 
-                <button onClick={() => setStep(2)} className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-700 transition">
+                <button onClick={() => setStep(2)} className="w-full bg-emerald-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-emerald-700 transition">
                   Schedule Walkthrough <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
@@ -150,9 +150,9 @@ export default function BookingPage() {
                 <div>
                   <div className="flex justify-between mb-2">
                     <label className="font-bold text-slate-700">Home Size (Sq Ft)</label>
-                    <span className="text-blue-600 font-bold">{sqftRes} sq ft</span>
+                    <span className="text-emerald-600 font-bold">{sqftRes} sq ft</span>
                   </div>
-                  <input type="range" min="500" max="5000" step="100" value={sqftRes} onChange={(e) => setSqftRes(Number(e.target.value))} className="w-full accent-blue-600" />
+                  <input type="range" min="500" max="5000" step="100" value={sqftRes} onChange={(e) => setSqftRes(Number(e.target.value))} className="w-full accent-emerald-600" />
                 </div>
                 <div className="grid grid-cols-2 gap-6">
                   <div>
@@ -176,13 +176,13 @@ export default function BookingPage() {
                   <label className="block font-bold text-slate-700 mb-4">How often do you need us?</label>
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                     {['weekly', 'biweekly', 'monthly', 'once'].map((freq) => (
-                      <button key={freq} onClick={() => setFrequencyRes(freq)} className={`py-3 px-4 rounded-xl border font-bold capitalize transition-all ${frequencyRes === freq ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-slate-200 text-slate-600 hover:border-slate-300'}`}>
+                      <button key={freq} onClick={() => setFrequencyRes(freq)} className={`py-3 px-4 rounded-xl border font-bold capitalize transition-all ${frequencyRes === freq ? 'border-emerald-600 bg-emerald-50 text-emerald-700' : 'border-slate-200 text-slate-600 hover:border-slate-300'}`}>
                         {freq}
                       </button>
                     ))}
                   </div>
                 </div>
-                <button onClick={() => setStep(2)} className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-700 transition">
+                <button onClick={() => setStep(2)} className="w-full bg-emerald-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-emerald-700 transition">
                   Choose Date & Time <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
@@ -196,34 +196,34 @@ export default function BookingPage() {
                 </div>
                 <div>
                   <label className="block font-bold text-slate-700 mb-2">Full Name</label>
-                  <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="John Doe" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-4 outline-none focus:border-blue-600" />
+                  <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="John Doe" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-4 outline-none focus:border-emerald-600" />
 
                   {propertyType === 'commercial' && (
                     <>
                       <label className="block font-bold text-slate-700 mb-2">Business Name</label>
-                      <input type="text" value={businessName} onChange={(e) => setBusinessName(e.target.value)} placeholder="Acme Corp" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-4 outline-none focus:border-blue-600" />
+                      <input type="text" value={businessName} onChange={(e) => setBusinessName(e.target.value)} placeholder="Acme Corp" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-4 outline-none focus:border-emerald-600" />
                     </>
                   )}
 
                   <label className="block font-bold text-slate-700 mb-2">Address</label>
-                  <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="123 Main St, Vancouver" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-6 outline-none focus:border-blue-600" />
+                  <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="123 Main St, Vancouver" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-6 outline-none focus:border-emerald-600" />
                   
                   <label className="block font-bold text-slate-700 mb-4">
                     {propertyType === 'commercial' ? 'When should we do the initial walkthrough?' : 'When should we arrive?'}
                   </label>
-                  <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="w-full border border-slate-200 rounded-xl p-4 font-medium text-lg outline-none focus:border-blue-600" />
+                  <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="w-full border border-slate-200 rounded-xl p-4 font-medium text-lg outline-none focus:border-emerald-600" />
                 </div>
                 <div>
                   <label className="block font-bold text-slate-700 mb-4">Time Window</label>
                   <div className="grid grid-cols-2 gap-3">
                     {['08:00 AM', '10:00 AM', '01:00 PM', '03:00 PM'].map((t) => (
-                      <button key={t} onClick={() => setTime(t)} className={`py-3 rounded-xl border font-bold transition-all ${time === t ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-slate-200 text-slate-600 hover:border-slate-300'}`}>
+                      <button key={t} onClick={() => setTime(t)} className={`py-3 rounded-xl border font-bold transition-all ${time === t ? 'border-emerald-600 bg-emerald-50 text-emerald-700' : 'border-slate-200 text-slate-600 hover:border-slate-300'}`}>
                         {t}
                       </button>
                     ))}
                   </div>
                 </div>
-                <button onClick={handleSubmission} disabled={!date || !name || !address || isSubmitting} className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-700 transition disabled:opacity-50">
+                <button onClick={handleSubmission} disabled={!date || !name || !address || isSubmitting} className="w-full bg-emerald-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-emerald-700 transition disabled:opacity-50">
                   {isSubmitting ? 'Processing...' : propertyType === 'commercial' ? 'Confirm Walkthrough' : 'Confirm Booking'} <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
@@ -298,7 +298,7 @@ export default function BookingPage() {
                     <span className="capitalize">{frequencyCom} Contract</span>
                   </div>
                   {date && (
-                    <div className="flex items-center gap-3 text-blue-400 font-bold">
+                    <div className="flex items-center gap-3 text-emerald-400 font-bold">
                       <CheckCircle2 className="w-4 h-4" />
                       <span>Walkthrough on {date}</span>
                     </div>
@@ -312,7 +312,7 @@ export default function BookingPage() {
                 </div>
                 <div className="flex justify-between items-end border-t border-slate-700 pt-6">
                   <div>
-                    <div className="text-blue-400 text-sm mb-1 font-bold">Est. Monthly Retainer</div>
+                    <div className="text-emerald-400 text-sm mb-1 font-bold">Est. Monthly Retainer</div>
                     <div className="text-3xl font-black text-white">${finalPriceCom.toLocaleString()}</div>
                     <div className="text-xs text-slate-500 mt-2 font-medium">Billed automatically on the 1st of every month. Final pricing pending onsite walkthrough.</div>
                   </div>

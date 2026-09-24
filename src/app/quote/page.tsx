@@ -94,7 +94,7 @@ export default function QuotePage() {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-white border-b py-4">
         <div className="max-w-4xl mx-auto px-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold text-blue-600">Vancouver Cleaning Service</Link>
+          <Link href="/" className="text-xl font-bold text-emerald-600">Vancouver Cleaning Service</Link>
           <div className="text-sm text-gray-500">Step {step} of 4</div>
         </div>
       </header>
@@ -111,18 +111,18 @@ export default function QuotePage() {
               <div className="grid sm:grid-cols-2 gap-6">
                 <button 
                   onClick={() => { setPropertyType("residential"); setStep(2); }}
-                  className={`p-8 border-2 rounded-xl flex flex-col items-center gap-4 transition hover:border-blue-600 hover:bg-blue-50 ${propertyType === "residential" ? "border-blue-600 bg-blue-50" : "border-gray-200"}`}
+                  className={`p-8 border-2 rounded-xl flex flex-col items-center gap-4 transition hover:border-emerald-600 hover:bg-emerald-50 ${propertyType === "residential" ? "border-emerald-600 bg-emerald-50" : "border-gray-200"}`}
                 >
-                  <Home className="w-12 h-12 text-blue-600" />
+                  <Home className="w-12 h-12 text-emerald-600" />
                   <span className="text-xl font-semibold">Residential</span>
                   <span className="text-sm text-gray-500 text-center">Homes, Apartments, Townhouses</span>
                 </button>
 
                 <button 
                   onClick={() => { setPropertyType("commercial"); setStep(2); }}
-                  className={`p-8 border-2 rounded-xl flex flex-col items-center gap-4 transition hover:border-blue-600 hover:bg-blue-50 ${propertyType === "commercial" ? "border-blue-600 bg-blue-50" : "border-gray-200"}`}
+                  className={`p-8 border-2 rounded-xl flex flex-col items-center gap-4 transition hover:border-emerald-600 hover:bg-emerald-50 ${propertyType === "commercial" ? "border-emerald-600 bg-emerald-50" : "border-gray-200"}`}
                 >
-                  <Building2 className="w-12 h-12 text-blue-600" />
+                  <Building2 className="w-12 h-12 text-emerald-600" />
                   <span className="text-xl font-semibold">Commercial</span>
                   <span className="text-sm text-gray-500 text-center">Offices, Restaurants, Retail, etc.</span>
                 </button>
@@ -164,7 +164,7 @@ export default function QuotePage() {
                   </select>
                 </div>
 
-                <button onClick={() => setStep(3)} className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold flex justify-center items-center gap-2 hover:bg-blue-700">
+                <button onClick={() => setStep(3)} className="w-full bg-emerald-600 text-white py-3 rounded-md font-semibold flex justify-center items-center gap-2 hover:bg-emerald-700">
                   Continue <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
@@ -207,7 +207,7 @@ export default function QuotePage() {
                 <button 
                   disabled={!comData.facilityType}
                   onClick={() => setStep(3)} 
-                  className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold flex justify-center items-center gap-2 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">
+                  className="w-full bg-emerald-600 text-white py-3 rounded-md font-semibold flex justify-center items-center gap-2 hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed">
                   Continue <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
@@ -269,7 +269,7 @@ export default function QuotePage() {
               </div>
 
               <div className="space-y-3">
-                <button className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition">
+                <button className="w-full bg-emerald-600 text-white py-3 rounded-md font-semibold hover:bg-emerald-700 transition">
                   Request Contract & Book
                 </button>
                 <button onClick={() => setStep(1)} className="w-full border border-gray-300 text-gray-700 py-3 rounded-md font-semibold hover:bg-gray-50 transition">

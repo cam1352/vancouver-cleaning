@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function BlogIndex() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
-      <Link href="/" className="text-blue-600 hover:underline mb-8 inline-block">&larr; Back Home</Link>
+      <Link href="/" className="text-emerald-600 hover:underline mb-8 inline-block">&larr; Back Home</Link>
       <h1 className="text-4xl font-bold mb-12 text-slate-900">Cleaning Tips & Local News</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="bg-white p-6 rounded-xl border border-slate-200">
